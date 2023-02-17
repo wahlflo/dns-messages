@@ -47,6 +47,5 @@ class UnparsedResourceRecord(ResourceRecord):
     def __str__(self) -> str:
         return 'UnparsedResourceRecord[name={},type={}]'.format(self.name, self.rr_type.name)
 
-    @abstractmethod
     def _data_to_bytes(self) -> bytes:
         return self.raw_data
